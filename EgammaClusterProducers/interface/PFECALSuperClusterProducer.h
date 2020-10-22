@@ -58,7 +58,7 @@ class PFECALSuperClusterProducer : public edm::stream::EDProducer<> {
   PFECALSuperClusterAlgo::clustering_type _theclusteringtype;
   PFECALSuperClusterAlgo::energy_weight   _theenergyweight;
 
-  std::shared_ptr<PFEnergyCalibration> thePFEnergyCalibration_;
+  std::shared_ptr<PFEnergyCalibration> thePFEnergyCalibration_; 
 
   /// verbose ?
   bool   verbose_;
@@ -71,6 +71,9 @@ class PFECALSuperClusterProducer : public edm::stream::EDProducer<> {
   std::string PFSuperClusterCollectionEndcapWithPreshower_;
   std::string PFClusterAssociationEBEE_;
   std::string PFClusterAssociationES_;
+
+  std::vector<double> mustacheParams_;
+  std::vector<double> dynPhiWindowParams_;
 
   // OOT photons
   bool isOOTCollection_;

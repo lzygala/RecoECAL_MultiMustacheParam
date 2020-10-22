@@ -98,6 +98,10 @@ class PFECALSuperClusterAlgo {
   void setMajorityFraction( const double f ) { fractionForMajority_ = f; }
   void setDropUnseedable( const bool d ) { dropUnseedable_ = d; }
 
+
+  void setMustacheParameters (std::vector<double> pMust, std::string pMustLocalFile) { pMustache_ = pMust; pMustacheLocalFile_ = pMustLocalFile;}
+  void setDynPhiWindowParameters (std::vector<double> pDynPhiWind) { pDynPhiWin_ = pDynPhiWind;}
+
   void setIsOOTCollection( bool isOOTCollection ){ isOOTCollection_ = isOOTCollection; }
 
   void setCrackCorrections( bool applyCrackCorrections) { applyCrackCorrections_ = applyCrackCorrections;}
@@ -163,6 +167,11 @@ class PFECALSuperClusterAlgo {
 
   bool applyCrackCorrections_;
   bool threshIsET_;
+
+
+  std::vector<double> pMustache_;
+  std::string pMustacheLocalFile_;
+  std::vector<double> pDynPhiWin_;
 
   // OOT photons
   bool isOOTCollection_;
